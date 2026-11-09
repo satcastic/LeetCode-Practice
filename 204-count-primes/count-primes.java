@@ -12,12 +12,10 @@ class Solution {
 
         Arrays.fill(isprime, true);
 
-        //traverse untill sqrt(n)
         for (int i = 2; i * i < n; i++) {
 
             if (isprime[i] == true) {
 
-                // i's multiples can't be a prime number
                 for (int j = i * i; j < n; j = j + i) {
 
                     isprime[j] = false;
